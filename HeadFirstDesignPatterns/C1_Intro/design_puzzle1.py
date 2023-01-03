@@ -10,7 +10,10 @@ class Character(ABC):
     weapon = None
 
     def fight(self):
-        self.weapon.use_weapon()
+        if self.weapon:
+            self.weapon.use_weapon()
+        else:
+            print(f'{type(self).__name__} doesnt have a weapon to fight')
 
     def set_weapon(self, w):
         self.weapon = w
@@ -83,3 +86,8 @@ if __name__ == '__main__':
     knight.fight()
     knight.set_weapon(AxeBehavior())
     knight.fight()
+
+    queen = Queen()
+    queen.fight()
+    queen.set_weapon(None)
+    queen.fight()
