@@ -1,4 +1,5 @@
-from HeadFirstDesignPatterns.C4_FactoryPattern.pizzeria.stores import NYPizzaStore, ChicagoPizzaStore
+from pizzeria.ny_pizzeria.store import NYPizzaStore
+from pizzeria.chicago_pizzeria.store import ChicagoPizzaStore
 
 
 if __name__ == '__main__':
